@@ -70,3 +70,5 @@ def test_normalize_phone_invalid():
     """Test that an invalid phone raises ValueError."""
     with pytest.raises(ValueError):
         normalize_phone("12345")
+def test_is_valid_email_false():
+    assert is_valid_email("invalid-email") == False
