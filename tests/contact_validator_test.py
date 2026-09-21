@@ -29,7 +29,7 @@ def test_is_valid_phone_true():
     result = is_valid_phone(phone)
 
     # Assert
-    assert result == "5551234567"
+    assert result == True
 
 
 def test_mask_email_basic():
@@ -42,3 +42,10 @@ def test_mask_email_basic():
 
     # Assert
     assert result == "pr***@example.com"
+def test_normalize_phone():
+    """Test normalizing a phone number."""
+    phone = "555-123-4567"
+
+    result = normalize_phone(phone)
+
+    assert result == "5551234567"
